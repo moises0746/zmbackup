@@ -15,10 +15,10 @@ function notify_begin()
     printf "Subject: Zmbackup - Backup routine for $1 start at $(date)" > $MESSAGE
     printf "\nGreetings Administrator," >> $MESSAGE
     printf "\n\nThis is an automatic message to inform you that the process for $2 BACKUP that you scheduled started right now." >> $MESSAGE
-    printf " Depending on the ammount of accounts and/or data to be backed up, this process can take some hours before conclude." >> $MESSAGE
+    printf " Depending on the amount of accounts and/or data to be backed up, this process can take some hours before conclude." >> $MESSAGE
     printf "\nDon't worry, we will inform you when the process finish." >> $MESSAGE
     printf "\n\nRegards," >> $MESSAGE
-    printf "\nZmbackup Team" >> $MESSAGE
+    printf "\nSysops Team" >> $MESSAGE
     ERR=$((sendmail -f $EMAIL_SENDER $EMAIL_NOTIFY < $MESSAGE ) 2>&1)
     if [[ $? -eq 0 ]]; then
       logger -i -p local7.info "Zmbackup: Mail sended to $EMAIL_NOTIFY to notify about the backup routine begin."
