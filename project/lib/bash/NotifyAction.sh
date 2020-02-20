@@ -70,7 +70,7 @@ function notify_finish()
     printf "\nAccounts: $QTDE" >> $MESSAGE
     printf "\nStatus: $3" >> $MESSAGE
     printf "\n\nRegards," >> $MESSAGE
-    printf "\nZmbackup Team" >> $MESSAGE
+    printf "\nSysops Team" >> $MESSAGE
     printf "\n\nSummary of files:\n" >> $MESSAGE
     cat $TEMPSESSION >> $MESSAGE
     ERR=$((sendmail -f $EMAIL_SENDER $EMAIL_NOTIFY < $MESSAGE ) 2>&1)
