@@ -24,8 +24,17 @@ MAILTO=root
 ###############################################################################
 #                          ZMBACKUP - OTHER OPTIONS                           #
 ###############################################################################
-# Mailbox Backup:     Every day at 1:30AM
-# LDAP Backup:        Every day at 1:00AM
+# Mailbox Backup:     Every day at 1:30AM                                     #
+# LDAP Backup:        Every day at 1:00AM                                     #
 ###############################################################################
 # 30 1 * * *      zimbra    zmbackup -f -ldp
 # 30 1  * * 0     zimbra    zmbackup -f -m
+
+###############################################################################
+#                          ZMRESTORE - OTHER OPTIONS                          #
+###############################################################################
+# Mailbox Backup:     Every day at 1:30AM                                     #
+# LDAP Backup:        Every day at 1:00AM                                     #
+###############################################################################
+# 30 1 * * *      zimbra    zmbackup -r -ldp full-$(date)
+# 30 1  * * 0     zimbra    zmbackup -r -m full-$(date)
